@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Calorie Calculator + Secret Chatbot ✨</title>
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <div class="container" role="main" aria-labelledby="main-title">
+    <h1 id="main-title">Calorie Calculator 🥗</h1>
+
+    <label for="age">Age</label>
+    <input id="age" type="number" min="10" max="120" placeholder="Years" />
+
+    <label for="gender">Gender</label>
+    <select id="gender" aria-label="Gender">
+      <option value="">Choose</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+
+    <label for="weight">Weight (kg)</label>
+    <input id="weight" type="number" min="20" max="400" placeholder="kg" />
+
+    <label for="height">Height (cm)</label>
+    <input id="height" type="number" min="90" max="260" placeholder="cm" />
+
+    <label for="activity">Activity level</label>
+    <select id="activity">
+      <option value="">Choose</option>
+      <option value="1.2">Sedentary — little/no exercise</option>
+      <option value="1.375">Lightly active — 1–3 days/week</option>
+      <option value="1.55">Moderately active — 3–5 days/week</option>
+      <option value="1.725">Very active — 6–7 days/week</option>
+      <option value="1.9">Extra active — heavy training/job</option>
+    </select>
+
+    <button id="calcBtn" type="button">Calculate</button>
+
+    <div id="results" class="results" aria-live="polite" role="status"></div>
+  </div>
+
+  <!-- sparkle icon trigger -->
+  <div class="chat-icon" id="chatToggle" title="Open secret chat">✨</div>
+
+  <!-- chatbox -->
+  <div class="chat-box" id="chatBox" aria-hidden="true" role="region" aria-label="Secret chat">
+    <div class="chat-header">HealthyBot ✨</div>
+    <div class="chat-messages" id="chatMessages" aria-live="polite"></div>
+    <div class="chat-input">
+      <input id="chatInput" type="text" placeholder="Ask about activity, calories, diet..." aria-label="Chat input" />
+      <button id="chatSend" type="button">Send</button>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
